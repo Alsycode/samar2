@@ -1,0 +1,29 @@
+{
+    "name": "samar",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 5000",
+        "start": "react-scripts --openssl-legacy-provider start",
+        "build": "next build",
+        "sass": "node-sass --watch scss/main.scss css/style.css --source-map css/style.css.map"
+    },
+    "dependencies": {
+        "@n8tb1t/use-scroll-position": "^2.0.3",
+        "moment": "^2.29.1",
+        "next": "^12.1.0",
+        "react": "^17.0.1",
+        "react-bootstrap": "^1.5.0",
+        "react-countup": "^4.3.3",
+        "react-dom": "^17.0.1",
+        "react-google-recaptcha": "^2.1.0",
+        "react-modal-video": "^2.0.0",
+        "react-router-dom": "^5.2.0",
+        "react-scroll-to-top": "^1.0.5",
+        "react-slick": "^0.28.0",
+        "react-visibility-sensor": "^5.1.1",
+        "simple-react-lightbox": "^3.6.6",
+        "slick-carousel": "^1.8.1",
+        "wowjs": "^1.1.3"
+    }
+}
