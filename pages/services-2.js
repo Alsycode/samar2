@@ -3,34 +3,32 @@ import Header2 from '../layout/header-2';
 import { useState } from "react";
 import Link from 'next/link';
 
-function Services2({ data }) {
+function Services2({service2sData}) {
   const [open, setOpen] = useState("p2");
 
-  console.log("data$$$$", data);
+  console.log("------------------------------------------------", service2sData);
 
   return (
     <>
       <Header2 />
-      <div className="page-content bg-white">
-        {/* <!-- Banner  --> */}
+      {/* <div className="page-content bg-white">
+    
         <div className="dlab-bnr-inr style-2 overlay-gradient-dark" style={{ backgroundImage: "url(images/banner/bnr1.jpg)" }}>
           <div className="container">
             <div className="dlab-bnr-inr-entry">
               <h1>Services</h1>
-              {/* <!-- Breadcrumb Row --> */}
+            
               <nav aria-label="breadcrumb" className="breadcrumb-row">
                 <ul className="breadcrumb">
                   <li className="breadcrumb-item"><Link href="/"><a>Home</a></Link></li>
                   <li className="breadcrumb-item active" aria-current="page">Services</li>
                 </ul>
               </nav>
-              {/* <!-- Breadcrumb Row End --> */}
+        
             </div>
           </div>
         </div>
-        {/* <!-- Banner End --> */}
-        
-        {/* Service */}
+     
         <div className="container">
           <div className="row">
             {data.data.map((service, index) => (
@@ -70,7 +68,6 @@ function Services2({ data }) {
           </div>
         </div>
 
-        {/* About us */}
         <section className="content-inner-2 about-wraper-1" style={{ backgroundImage: "url(images/background/bg15.png)", backgroundSize: "contain", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
           <div className="container">
             <div className="row align-items-center">
@@ -126,16 +123,9 @@ function Services2({ data }) {
           </div>
         </section>
      
-        {/* <!-- Service --> */}
-        {/* <OurServices2/> */}
+      
         
-        {/* <!-- Testimonials --> */}
-        {/* <Testimonial2/> */}
-        
-        {/* <!-- Clients Logo --> */}
-        {/* <Clients2/> */}
-        
-      </div>
+      </div> */}
       <Footer2 />
     </>
   );

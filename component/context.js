@@ -5,6 +5,7 @@ const testimonyDataContext =createContext();
 const clientDataContext = createContext();
 const portfolio2DataContext = createContext();
 const productsDataContext = createContext();
+const service2DataContext = createContext();
 
 export function BlogDataProvider({ children }) {
     const [blogsData, setBlogData] = useState([]);
@@ -84,5 +85,21 @@ export function BlogDataProvider({ children }) {
   
   export function useProductsData() {
     return useContext(productsDataContext);
+  }
+  
+
+  export function Service2DataProvider({ children }) {
+    // Define the state and functions for managing "service2" data.
+    const [service2Data, setService2Data] = useState([]);
+  
+    return (
+      <service2DataContext.Provider value={{ service2Data, setService2Data }}>
+        {children}
+      </service2DataContext.Provider>
+    );
+  }
+
+  export function useService2Data() {
+    return useContext(service2DataContext);
   }
   

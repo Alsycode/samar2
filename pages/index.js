@@ -21,18 +21,29 @@ import { ProductsDataProvider } from "../component/context";
 import BlogSlider from "../component/blogslide";
 import { ClientDataProvider } from "../component/context";
 import { Portfolio2DataProvider } from "../component/context";
+import {Service2DataProvider} from "../component/context"
 import ProductSlider from "../component/productSlider"
-function Index2({blogData,pricingData,testimonial2sData,clients2Data,portfolio2Data,productsData}) {
-  // console.log("blog",blogData);
-  console.log("portfolio2Data",productsData);
+function Index2({blogData,testimonyData,pricingData,testimonial2sData,clients2Data,portfolio2Data,productsData,service2sData}) {
+
+  console.log("blogData",blogData);
+  console.log("pricingData",pricingData);
+  console.log("testimonyData",testimonyData);
+  console.log("clients2Data",clients2Data);
+  console.log("portfolio2Data",portfolio2Data);
+  console.log("productsData",productsData);
+  console.log("service2sData",service2sData);
+
 
   return (
     <>
-    {/* <GHSProvider> */}
+   
       <Header2 />
       <div className="page-content bg-white">
         <Slider2 />
-        <Service2 />
+        <Service2DataProvider> 
+        <Service2  service2sData={service2sData}/>
+         </Service2DataProvider>
+      
         <AboutUs2 />
         <ProductsDataProvider>
         <ProductSlider productsData={productsData}/>
@@ -61,7 +72,7 @@ function Index2({blogData,pricingData,testimonial2sData,clients2Data,portfolio2D
      
       </div>
       <Footer2 />
-      {/* </GHSProvider> */}
+   
     </>
   );
 }
@@ -75,7 +86,8 @@ export async function getServerSideProps() {
   const apiUrlTestimonials2 = 'https://aecstrapi-askn4.ondigitalocean.app/api/testimonial2s?populate=*';
   const apiUrlClients2 = 'https://aecstrapi-askn4.ondigitalocean.app/api/client2s?populate=*';
   const apiUrlPortfolio2 = 'https://aecstrapi-askn4.ondigitalocean.app/api/portfolio2s?populate=*';
-  const apiUrlProducts = 'https://aecstrapi-askn4.ondigitalocean.app/api/products?populate=*'; // New URL
+  const apiUrlProducts = 'https://aecstrapi-askn4.ondigitalocean.app/api/products?populate=*';
+  const apiUrlService2s = 'https://aecstrapi-askn4.ondigitalocean.app/api/service2s?populate=*'; // New URL
 
   const bearerToken = 'Bearer 1cc0a576b38722e585230c62dc90b0476114ad0a15b46ab32402682387a85a661eaa649219d2b959481317fc5cb253a6021487927a8c43f6018f1d1ee7e126540c8a9da5cc064e5e77d2cb43ec767894c2319957a651cdf7d84f914d4588c5cd83142301d22bc2c3cfcb8a7a248a6328307ceabd5ef6532153d892e16be6a5e5';
 
@@ -87,22 +99,24 @@ export async function getServerSideProps() {
       testimonial2sResponse,
       clients2Response,
       portfolio2Response,
-      productsResponse, // New response
+      productsResponse,
+      service2sResponse, // New response
     ] = await Promise.all([
       fetch(apiUrlBlogs, { headers: { Authorization: bearerToken } }),
       fetch(apiUrlTestimony, { headers: { Authorization: bearerToken } }),
       fetch(apiUrlPricing, { headers: { Authorization: bearerToken } }),
       fetch(apiUrlTestimonials2, { headers: { Authorization: bearerToken }}),
       fetch(apiUrlClients2, { headers: { Authorization: bearerToken }}),
-      fetch(apiUrlPortfolio2, { headers: { Authorization: bearerToken } }),
-      fetch(apiUrlProducts, { headers: { Authorization: bearerToken }}), // New fetch
+      fetch(apiUrlPortfolio2, { headers: { Authorization: bearerToken }}),
+      fetch(apiUrlProducts, { headers: { Authorization: bearerToken }}),
+      fetch(apiUrlService2s, { headers: { Authorization: bearerToken }}), // New fetch
     ]);
 
     if (!blogsResponse.ok) {
       throw new Error('Failed to fetch blog contents data.');
     }
     if (!testimonyResponse.ok) {
-      throw new Error('Failed to fetch blog contents data.');
+      throw  new Error('Failed to fetch blog contents data.');
     }
     if (!pricingResponse.ok) {
       throw new Error('Failed to fetch blog contents data.');
@@ -116,8 +130,11 @@ export async function getServerSideProps() {
     if (!portfolio2Response.ok) {
       throw new Error('Failed to fetch service2s data.');
     }
-    if (!productsResponse.ok) { // Check response for the new URL
+    if (!productsResponse.ok) {
       throw new Error('Failed to fetch products data.');
+    }
+    if (!service2sResponse.ok) { // Check response for the new URL
+      throw new Error('Failed to fetch service2s data.');
     }
 
     const [
@@ -127,7 +144,8 @@ export async function getServerSideProps() {
       testimonial2sData,
       clients2Data,
       portfolio2Data,
-      productsData, // New data
+      productsData,
+      service2sData, // New data
     ] = await Promise.all([
       blogsResponse.json(),
       testimonyResponse.json(),
@@ -135,7 +153,8 @@ export async function getServerSideProps() {
       testimonial2sResponse.json(),
       clients2Response.json(),
       portfolio2Response.json(),
-      productsResponse.json(), // New data
+      productsResponse.json(),
+      service2sResponse.json(), // New data
     ]);
 
     return {
@@ -146,7 +165,8 @@ export async function getServerSideProps() {
         testimonial2sData: testimonial2sData.data,
         clients2Data: clients2Data.data,
         portfolio2Data: portfolio2Data.data,
-        productsData: productsData.data, // New prop
+        productsData: productsData.data,
+        service2sData: service2sData.data, // New prop
       },
     };
   } catch (error) {
@@ -159,9 +179,9 @@ export async function getServerSideProps() {
         testimonial2sData: [],
         clients2Data: [],
         portfolio2Data: [],
-        productsData: [], // New default value
+        productsData: [],
+        service2sData: [], // New default value
       }
     };
   }
 }
-
