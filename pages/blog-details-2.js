@@ -94,13 +94,7 @@ function BlogDetails2() {
 													<ul>
 														<li className="post-date"><i className="flaticon-clock m-r10"></i>7 March, 2020</li>
 														<li className="post-comment"><Link href="#"><a><i className="flaticon-speech-bubble"></i><span>15</span></a></Link></li>
-														<li className="post-share"><i className="flaticon-share"></i>
-															<ul>
-																<li><a className="fa fa-facebook" href="https://www.facebook.com/"></a></li>
-																<li><a className="fa fa-twitter"  href="https://ads.twitter.com/login"></a></li>
-																<li><a className="fa fa-linkedin" href="https://in.linkedin.com/"></a></li>
-															</ul>
-														</li>
+														
 													</ul>
 												</div>
 												<h5 className="dlab-title">
@@ -120,13 +114,7 @@ function BlogDetails2() {
 													<ul>
 														<li className="post-date"><i className="flaticon-clock m-r10"></i>7 March, 2020</li>
 														<li className="post-comment"><Link href="#"><a><i className="flaticon-speech-bubble"></i><span>15</span></a></Link></li>
-														<li className="post-share"><i className="flaticon-share"></i>
-															<ul>
-																<li><a className="fa fa-facebook" href="https://www.facebook.com/"></a></li>
-																<li><a className="fa fa-twitter" href="https://ads.twitter.com/login"></a></li>
-																<li><a className="fa fa-linkedin" href="https://in.linkedin.com/"></a></li>
-															</ul>
-														</li>
+														
 													</ul>
 												</div>
 												<h5 className="dlab-title">
@@ -146,13 +134,7 @@ function BlogDetails2() {
 													<ul>
 														<li className="post-date"><i className="flaticon-clock m-r10"></i>7 March, 2020</li>
 														<li className="post-comment"><Link href="#"><a><i className="flaticon-speech-bubble"></i><span>15</span></a></Link></li>
-														<li className="post-share"><i className="flaticon-share"></i>
-															<ul>
-																<li><a className="fa fa-facebook" href="https://www.facebook.com/"></a></li>
-																<li><a className="fa fa-twitter" href="https://ads.twitter.com/login"></a></li>
-																<li><a className="fa fa-linkedin" href="https://in.linkedin.com/"></a></li>
-															</ul>
-														</li>
+														
 													</ul>
 												</div>
 												<h5 className="dlab-title">

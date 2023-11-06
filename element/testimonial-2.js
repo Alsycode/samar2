@@ -1,7 +1,7 @@
 
 import TestimonialSlider2 from '../component/testimonialSlider-2';
 
-function Testimonial2() {
+function Testimonial2({testimonial2sData}) {
   return (
     <>
       {/* <!-- Testimonials --> */}
@@ -13,7 +13,7 @@ function Testimonial2() {
 				</div>
 				<div className="row">
 					<div className="col-md-12">
-						<TestimonialSlider2/>
+						<TestimonialSlider2 testimonial2sData={testimonial2sData}/>
 					</div>
 				</div>
 			</div>

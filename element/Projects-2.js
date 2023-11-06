@@ -1,6 +1,6 @@
 import Portfolio2 from "../component/portfolio-2";
 
-function Projects2() {
+function Projects2({portfolio2Data}) {
     return (
       <>
         {/* <!-- Projects --> */}
@@ -10,7 +10,7 @@ function Projects2() {
 					<h6 className="sub-title text-primary bgl-primary m-b15">PORTFOLIO</h6> 
 					<h2 className="title">Take A Look At Our Latest Work</h2>
 				</div>
-				<Portfolio2/>
+				<Portfolio2 portfolio2Data={portfolio2Data}/>
 			</div>
 		</section>
       </>

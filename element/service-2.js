@@ -1,8 +1,9 @@
 import {useState} from 'react';
 import Link from 'next/link';
 
-function Service2() {
+function Service2({data}) {
     const [open, setOpen] = useState("p2")
+	console.log("data222222222222222222222",data)
     return (
       <>
         {/* <!-- Service --> */}
@@ -15,7 +16,8 @@ function Service2() {
 							<h2 className="title m-t10">We Are Providing Digital Services</h2>
 						</div>
 					</div>
-					<div className="col-lg-4 col-md-6">
+					 {/* {serviceData.map((service)=> */}
+							<div className="col-lg-4 col-md-6">
 					<div className={`${open === "p1" ? "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp active" : "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp"}`} onMouseOver={() => setOpen("p1")}>
 							<div className="icon-bx-sm radius bgl-primary"> 
 								<Link href="#"><a className="icon-cell">
@@ -30,6 +32,8 @@ function Service2() {
 							</div>
 						</div>
 					</div>
+					{/* )}  */}
+				
 					<div className="col-lg-4 col-md-6">
 						<div className={`${open === "p2" ? "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp active" : "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp"}`} onMouseOver={() => setOpen("p2")}>
 							<div className="icon-bx-sm radius bgl-primary"> 
@@ -95,3 +99,5 @@ function Service2() {
   }
   
   export default Service2;
+
+ 

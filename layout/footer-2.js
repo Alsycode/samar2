@@ -33,7 +33,8 @@ function Footer2() {
 					<div className="col-xl-3 col-lg-4 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                         <div className="widget widget_about">
 							<div className="footer-logo">
-								<a href="/"><img src="images/logo-white.png" alt=""/></a> 
+								{/* <a href="/"><img src="images/logo-white.png" alt=""/></a>  */}
+								<h2 className='text-white'>BOOK-SEVA</h2>
 							</div>
 							<div className="widget widget_getintuch">
 								<ul>
@@ -72,7 +73,7 @@ function Footer2() {
 								<li><Link href="#"><a>Strategy & Research</a></Link></li>
 								<li><Link href="#"><a>Web Development</a></Link></li>
 								<li><Link href="#"><a>Web Solution</a></Link></li>
-								<li><Link href="#"><a>Digital Marketing</a></Link></li>
+								<li><Link href="#"><a>Digital Marketing</a></Link></li> 
 								<li><Link href="#"><a>App Design </a></Link></li>
 							</ul>
 						</div>
@@ -97,7 +98,7 @@ function Footer2() {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-7 text-left"> 
-						<span className="copyright-text">Copyright © 2022 <a href="https://dexignzone.com/" target="_blank">DexignZone</a>. All rights reserved.</span> 
+						<span className="copyright-text">Copyright © 2023 <a href="https://dexignzone.com/" target="_blank">GoDigitalHub Magneto</a>. All rights reserved.</span> 
 					</div>
 					<div className="col-lg-6 col-md-5 text-right"> 
 						<div className="dlab-social-icon">

@@ -120,13 +120,13 @@ function ServicesDetails2() {
 		<AllServices2/>
 				
 		{/* <!-- Testimonials --> */}
-		<Testimonial2/>
+		{/* <Testimonial2/> */}
 		
 		{/* <!-- Clients Logo --> */}
 		<div className="content-inner-3 bg-white">
 			<div className="container">
 				<div className="clients-carousel owl-none m-b30 owl-carousel">
-					<ClientSlider/>
+					{/* <ClientSlider/> */}
 				</div>
 			</div>
 		</div>

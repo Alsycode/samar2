@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Slider from "react-slick";
 
-function BlogSlider() {
+function BlogSlider({blogData}) {
     const [asd, setAsd] = useState();
     const settings = {
         dots: false,

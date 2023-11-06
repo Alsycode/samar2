@@ -1,6 +1,6 @@
 import PricingTable2 from "../component/pricingTable-2";
 import Toggle from "../component/pricingToggle";
-function Pricing2() {
+function Pricing2({pricingData}) {
     return (
       <>
         {/* <!-- Our Pricing --> */}
@@ -16,7 +16,7 @@ function Pricing2() {
 					
 					<span className="yearly">Yearly</span>
 				</div>
-                <PricingTable2/>
+                <PricingTable2 pricingData={pricingData}/>
 			</div>
 		</section>
       </>

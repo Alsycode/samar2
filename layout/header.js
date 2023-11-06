@@ -38,11 +38,11 @@ function Header() {
                                     <ul className="sub-menu">
                                         <li><Link href="/about-us-1"><a>About Us</a></Link></li>
 										<li><Link href="/faq-1"><a>Faq</a></Link></li>
-                                        <li><Link href="/pricing-table-1"><a>Pricing Table</a></Link></li>
-										<li><Link href="/team-1"><a>Team</a></Link></li>
-                                        <li><Link href="/coming-soon"><a>Coming Soon</a></Link></li>
-                                        <li><Link href="/error-404"><a>Error 404</a></Link></li>
-                                        <li><Link href="/sitedown"><a>Site Down</a></Link></li>
+                                        <li><Link href="/pricing-table-1"><a>Contact</a></Link></li>
+										<li><Link href="/team-1"><a>Gallery</a></Link></li>
+                                        <li><Link href="/coming-soon"><a>Products</a></Link></li>
+                                        <li><Link href="/error-404"><a>News and Events</a></Link></li>
+                                        <li><Link href="/sitedown"><a>Careers</a></Link></li>
                                     </ul>
                                 </li>
                                 <li className={`${open === "services" ? "open" : ""}`}><a onClick={() => setOpen("services")}><span>Services</span><i className="fa fa-chevron-down"></i></a>

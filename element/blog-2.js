@@ -1,7 +1,7 @@
 import BlogSlider2 from "../component/blogSlider-2";
 
-
-function Blog2() {
+import BlogSlider from "../component/blogslide";
+function Blog2({blogData}) {
   return (
     <>
       <section className="content-inner-2" style={{"backgroundImage":"url(images/background/bg16.png)","backgroundSize":"cover","backgroundPosition":"top center","backgroundRepeat":"no-repeat"}}>
@@ -10,7 +10,7 @@ function Blog2() {
 					<h6 className="sub-title text-primary bgl-primary m-b15">OUR BLOG</h6>
 					<h2 className="title">Latest News & Blog</h2>
 				</div>
-				<BlogSlider2/>
+				<BlogSlider blogData={blogData}/>
 			</div>
 		</section>
     </>

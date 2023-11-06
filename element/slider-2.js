@@ -68,7 +68,7 @@ function Slider2() {
         </div>
       </div>
       <div className="dz-media">
-        <img src="images/main-slider/slider2/pic1.jpg" alt="" />
+        <img src="images/main-slider/slider2/bannerslider.jpeg" alt="" />
       </div>
     </div>
   );
