@@ -59,37 +59,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
 		<Head>
-			<title>Samar - React Template</title>
-			<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png"/>
+			<title>Theme2</title>
+			<link rel="icon" type="image/png" sizes="16x16" href="/images/GDH LOGO.png"/>
         </Head>	
       <div className="page-wraper">
         <Component {...pageProps} />
       </div>
-      <a
-        href="https://themeforest.net/cart/configure_before_adding/32950742/?license=regular"
-        target="_blank"
-        className="bt-buy-now theme-btn"
-      >
-        <i className="ti-shopping-cart" />
-        <span>Buy Now</span>
-      </a>
-      <a
-        href="https://support.w3itexperts.com"
-        target="_blank"
-        className="bt-support-now theme-btn"
-      >
-        <i className="ti-headphone-alt" />
-        <span>Support</span>
-      </a>
-      <a href="#top">
-        <button
-          className="scroltop icon-up"
-          type="button"
-          style={{ display: "inline-block" }}
-        >
-          <i className="fa fa-arrow-up" />
-        </button>
-      </a>
+  
+  
+   
     </>
   );
 }

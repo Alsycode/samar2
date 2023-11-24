@@ -6,6 +6,7 @@ const clientDataContext = createContext();
 const portfolio2DataContext = createContext();
 const productsDataContext = createContext();
 const service2DataContext = createContext();
+const aboutUs2DataContext = createContext();
 
 export function BlogDataProvider({ children }) {
     const [blogsData, setBlogData] = useState([]);
@@ -103,3 +104,20 @@ export function BlogDataProvider({ children }) {
     return useContext(service2DataContext);
   }
   
+  export function AboutUs2DataProvider({ children }) {
+    // Define the state and functions for managing aboutus2 data.
+    const [aboutUs2Data, setAboutUs2Data] = useState([]);
+  
+    return (
+      <aboutUs2DataContext.Provider value={{ aboutUs2Data, setAboutUs2Data }}>
+        {children}
+      </aboutUs2DataContext.Provider>
+    );
+  }
+  
+  // Create a custom hook for accessing aboutus2 data
+  export function useAboutUs2Data() {
+    return useContext(aboutUs2DataContext);
+  }
+
+ 

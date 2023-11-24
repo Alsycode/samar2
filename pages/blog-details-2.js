@@ -17,7 +17,7 @@ function BlogDetails2() {
 							<nav aria-label="breadcrumb" className="breadcrumb-row">
 								<ul className="breadcrumb">
 									<li className="breadcrumb-item"><Link href="/"><a>Home</a></Link></li>
-									<li className="breadcrumb-item active" aria-current="page">Blog</li>
+									<li className="breadcrumb-item active" aria-current="page"><LinK href=""></LinK>Blog</li>
 								</ul>
 							</nav>
 							{/* <!-- Breadcrumb Row End --> */}

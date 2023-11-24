@@ -2,7 +2,7 @@ import Slider from "react-slick";
 
 function TestimonialSlider2({testimonial2sData}) {
   console.log("testimonial2sData",testimonial2sData)
-  // const image = testimonial2sData[0].data.attributes.image.data.attributes.formats.large.url;
+  const image = testimonial2sData[0].data.attributes.image.data.attributes.formats.large.url;
   // console.log("2sData",image)
   const settings = {
     dots: true,

@@ -1,14 +1,14 @@
 function Slider2() {
   return (
     // <!-- Slider -->
-    <div className="banner-two gradient">
+    <div className="banner-one gradient">
       <div className="container">
         <div className="banner-inner">
-          <img
+          {/* <img
             className="img1 move-2"
             src="images/main-slider/slider2/pic3.png"
             alt=""
-          />
+          /> */}
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="banner-content text-white">
@@ -67,9 +67,9 @@ function Slider2() {
           <img className="img3 move-2" src="images/pattern/pattern9.png" alt="" />
         </div>
       </div>
-      <div className="dz-media">
+      {/* <div className="dz-media">
         <img src="images/main-slider/slider2/bannerslider.jpeg" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 }

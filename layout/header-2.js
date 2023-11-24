@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Faq from "../pages/faq-2"
 function Header2() {
     const [show, setShow] = useState(false);
     const [open, setOpen] = useState("home");
@@ -20,13 +21,20 @@ function Header2() {
                             <div className="dlab-topbar-left">
                                 <ul>
                                     <li>
+                                        <a href="mailto:info@example.com">
                                         <i className="la la-envelope"></i>{" "}
-                                        info@example.com
+                                      <span style={{ color: 'white' }}>info@example.com</span>  
+                                        </a>
+                                       
                                     </li>
                                     <li>
-                                        <i className="la la-phone-volume"></i> +91
-                                        987-654-3210
+                                       <a href="tel:+918289928828" style={{text:"white",textDecoration: 'none',}}>
+                                       <i className="ti-phone"></i><span style={{ color: 'white' }}>+91 8891064567 </span>
+  </a>
+                                     
                                     </li>
+                                   
+                                      
                                 </ul>
                             </div>
                             <div className="dlab-topbar-right">
@@ -62,9 +70,9 @@ function Header2() {
                             <div className="logo-header mostion logo-dark">
                                 <Link href="/">
                                     <a className='text-white'>
-                                        {/* <img className="custom-logo-white" src="images/sopanam-logo.svg" alt="" />
-                                       <img className="custom-logo" src="images/logo-2.png" alt="" />  */}
-                                       BOOK-SEVA
+                                         <img className="custom-logo-white" src="images/GDH LOGO.png" alt="" />
+                                       <img className="custom-logo" src="images/GDH LOGO.png" alt="" />  
+                                     
                                     </a>
                                 </Link>
                             </div>
@@ -114,16 +122,16 @@ function Header2() {
                                             <i className="fa fa-chevron-down"></i>
                                         </a>
                                         <ul className="sub-menu">
-                                        <li><Link href="/about-us-1"><a>About Us</a></Link></li>
-										<li><Link href="/faq-1"><a>Faq</a></Link></li>
-                                        <li><Link href="/pricing-table-1"><a>Contact</a></Link></li>
-										<li><Link href="/team-1"><a>Gallery</a></Link></li>
-                                        <li><Link href="/coming-soon"><a>Products</a></Link></li>
-                                        <li><Link href="/error-404"><a>News and Events</a></Link></li>
-                                        <li><Link href="/sitedown"><a>Careers</a></Link></li>
+                                        <li><Link href="/about"><a>About Us</a></Link></li>
+										<li><Link href="/faq-2"><a>Faq</a></Link></li>
+                                        {/* <li><Link href="/pricing-table-1"><a>Contact</a></Link></li> */}
+										{/* <li><Link href="/team-1"><a>Gallery</a></Link></li> */}
+                                        {/* <li><Link href="/coming-soon"><a>Products</a></Link></li> */}
+                                        {/* <li><Link href="/error-404"><a>News and Events</a></Link></li>
+                                        <li><Link href="/sitedown"><a>Careers</a></Link></li> */}
                                         </ul>
                                     </li>
-                                    <li className={`${open === "services" ? "open" : ""}`}><a onClick={() => setOpen("services")}><span>Careers</span><i className="fa fa-chevron-down"></i></a>
+                                    <li className={`${open === "services" ? "open" : ""}`}><a onClick={() => setOpen("services")}><span>Services</span><i className="fa fa-chevron-down"></i></a>
 										<ul className="sub-menu">
 											<li><Link href="/services"><a>Services</a></Link></li>
 											<li><Link href="/services-details-2"><a>Services Details</a></Link></li>
@@ -135,8 +143,17 @@ function Header2() {
 											{/* <li><Link href="/blog-details-2"><a>Blog Details</a></Link></li> */}
 										</ul>
 									</li>
+                                    <li><Link href="/team-2"><a>Team</a></Link></li>
+                                    <li><Link href="/products"><a>Products</a></Link></li>
+                                    {/* <li className={`${open === "blog" ? "open" : ""}`}><a onClick={() => setOpen("blog")}><span>Team</span></a>
+										<ul className="sub-menu">
+											
+											 <li><Link href="/blog-details-2"><a>Blog Details</a></Link></li> 
+										</ul>
+									</li> */}
 									<li><Link href="/contact-us-2"><a>Contact Us</a></Link></li>
-									<li><Link href="/team-1"><a>Gallery</a></Link></li>
+								
+                                    <li><Link href="explore"><a>Explore</a></Link></li>
                                 </ul>
                                 <div className="dlab-social-icon">
                                     <ul>

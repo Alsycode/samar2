@@ -15,6 +15,9 @@ function BlogGrid2({blogs}) {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  const navigateBack = () => {
+	router.back();
+  }
   return (
    <>
 	<Header2/>
@@ -28,7 +31,7 @@ function BlogGrid2({blogs}) {
 					<nav aria-label="breadcrumb" className="breadcrumb-row">
 						<ul className="breadcrumb">
 							<li className="breadcrumb-item"><Link href="/"><a>Home</a></Link></li>
-							<li className="breadcrumb-item active" aria-current="page">Blog</li>
+							<li className="breadcrumb-item active" aria-current="page">Back</li>
 						</ul>
 					</nav>
 					{/* <!-- Breadcrumb Row End --> */}
@@ -77,7 +80,7 @@ function BlogGrid2({blogs}) {
 					)
 				)}
 					
-					<div className="container text-center">
+					{/* <div className="container text-center">
           <ul className="pagination">
             {Array.from({ length: Math.ceil(blogs.length / itemsPerPage) }, (_, i) => i + 1).map((pageNumber) => (
               <li key={pageNumber} className={`page-item ${currentPage === pageNumber ? 'active' : ''}`}>
@@ -89,9 +92,34 @@ function BlogGrid2({blogs}) {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 					
-				
+					{/* <div className="row extra-blog style-2">
+									<div className="col-lg-12 m-b30">
+										<h2 className="blog-title">Related Blogs</h2>
+										<div className="dlab-separator style-1"></div>
+									</div>
+									<div className="col-lg-4 col-md-6">
+										<div className="dlab-blog style-1 m-b30">
+											<div className="dlab-info">
+												<div className="dlab-meta">
+													<ul>
+														<li className="post-date"><i className="flaticon-clock m-r10"></i>7 March, 2020</li>
+														<li className="post-comment"><Link href="#"><a><i className="flaticon-speech-bubble"></i><span>15</span></a></Link></li>
+														
+													</ul>
+												</div>
+												<h5 className="dlab-title">
+													<Link href="/blog-details-2"><a>Maecenas laoree efficitur sagittis aliquam eleifend nisl.</a></Link>
+												</h5>
+												<p className="m-b0">Aenean pharetra velit , non ullamcorper quam dictum nec. Praesent vel rhoncus dolor, molestie maximus risus.</p>
+											</div>
+											<div className="dlab-media">
+												<Link href="/blog-details-2"><a><img src="images/blog/blog-grid/pic1.jpg" alt="" /></a></Link>
+											</div>
+										</div>
+									</div>
+									</div> */}
 				
                 </div>
 			</div>

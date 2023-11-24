@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-function BlogSlider({blogData}) {
+function BlogSlider({productsData}) {
   // Access the blogData from context
 //   const blogData = useBlogData();
-  console.log("sliderteest", blogData);
+  console.log("sliderteest", productsData);
 
   // Define your settings for the Slider component
   const settings = {
@@ -64,34 +64,37 @@ function BlogSlider({blogData}) {
 <>
   <div className="blog-carousel1 owl-btn-1 owl-btn-center-lr owl-btn-primary" style={{ position: 'relative' }}>
     <Slider {...settings}>
-      {/* {blogData.reverse().slice(0, 4).map((blog) => (
-        <Link href={`./blog/blogdetails/${blog.attributes.slug}`} >
+    
+ {productsData.reverse().slice(0, 4).map((product) => (
+      <Link href={`./products/productDetails/${product.attributes.slug}`} >
           <div className="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
             <div className="dlab-blog style-1 bg-white text-center">
               <div className="dlab-media">
-                <Image
-                  src={blog.attributes.image.data.attributes.formats.large.url}
+                {/* <Image
+                  src={product.attributes.image.data.attributes.formats.large.url}
                   alt=""
                   width={300}
                   height={300}
-                />
+                /> */}
+
+<img src={product?.attributes?.image?.data?.attributes?.formats?.large?.url}  style={{maxHeight:"300px"}} alt=""/>
               </div>
               <div className="dlab-info">
                 <h5 className="dlab-title">
                 
-                    <a>{blog.attributes.topic}</a>
+                    {product?.attributes?.name}
              
                 </h5>
                 <div className='h-400'>
                   <p className="m-b0 ">
-                    {truncateText(blog.attributes.explaination, 100)}
+                    {truncateText(product.attributes.description, 50)}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </Link>
-      ))} */}
+         </Link>
+      ))}   
     </Slider>
     {renderArrows()}
   </div>

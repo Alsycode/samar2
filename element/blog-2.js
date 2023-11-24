@@ -10,7 +10,7 @@ function Blog2({blogData}) {
 					<h6 className="sub-title text-primary bgl-primary m-b15">OUR BLOG</h6>
 					<h2 className="title">Latest News & Blog</h2>
 				</div>
-				<BlogSlider blogData={blogData}/>
+				<BlogSlider2 blogData={blogData}/>
 			</div>
 		</section>
     </>

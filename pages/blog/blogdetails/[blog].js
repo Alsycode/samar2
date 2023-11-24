@@ -20,6 +20,12 @@ const slug = router.query
       const relatedBlogs = blogDatas.data.filter((blog) => (
          blog.attributes.heading.toLowerCase().includes(filterQuery.toLowerCase())
      ));
+     console.log("relatedBlogs",relatedBlogs)
+
+
+     const navigateBack = () => {
+      router.back();
+     }
 	return (
 		<>
 			<Header2 />
@@ -33,7 +39,7 @@ const slug = router.query
 							<nav aria-label="breadcrumb" className="breadcrumb-row">
 								<ul className="breadcrumb">
 									<li className="breadcrumb-item"><Link href="/"><a>Home</a></Link></li>
-									<li className="breadcrumb-item active" aria-current="page">Blog</li>
+									<li className="breadcrumb-item active" aria-current="page" onClick={navigateBack}>Back</li>
 								</ul>
 							</nav>
 						
@@ -49,8 +55,8 @@ const slug = router.query
 								<div className="dlab-blog blog-single style-2">
 									<div className="dlab-media rounded-md shadow">
                                     <Image
-                                width={600}
-                                height={270}
+                                width={1200}
+                                height={400}
                                 src={
                                     blogData.data[0].attributes.image.data.attributes
                                     .formats.large.url
@@ -87,22 +93,7 @@ const slug = router.query
 										<p>{ blogData.data[0].attributes.para1}</p>
 										
 									</div>
-									<div className="dlab-meta meta-bottom border-top">
-										<div className="post-tags">
-											Tags:
-												<Link href="#"><a>#Child </a></Link> ,
-												<Link href="#"><a>#Eduction </a></Link> ,
-												<Link href="#"><a>#Money </a></Link> ,
-												<Link href="#"><a>#Resturent </a></Link>
-										</div>
-										<div className="dlab-social-icon primary-light">
-											<ul>
-												<li><a className="fa fa-facebook" href="https://www.facebook.com/"></a></li>
-												<li><a className="fa fa-instagram" href="https://www.instagram.com/"></a></li>
-												<li><a className="fa fa-twitter" href="https://ads.twitter.com/login"></a></li>
-											</ul>
-										</div>
-									</div>
+									
 								</div>
 								<div className="row extra-blog style-2">
 									<div className="col-lg-12 m-b30">
@@ -125,7 +116,8 @@ const slug = router.query
                                             <p className="m-b0">Aenean pharetra velit , non ullamcorper quam dictum nec. Praesent vel rhoncus dolor, molestie maximus risus.</p>
                                         </div>
                                         <div className="dlab-media">
-                                            <Link href="/blog-details-2"><a><img src="images/blog/blog-grid/pic1.jpg" alt="" /></a></Link>
+                                            <Link href="/blog-details-2"><a><img src={blog.attributes.image.data.attributes
+                                    .formats.large.url} alt="" style={{maxHeight:"250px"}}/></a></Link>
                                         </div>
                                     </div>
                                 </div>

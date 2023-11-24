@@ -17,6 +17,7 @@ function Service2({service2sData}) {
 						</div>
 					</div>
 					 {service2sData.map((service)=>
+					  <Link href={`./services/${service.attributes.slug}`}>
 							 <div className="col-lg-4 col-md-6">
 					<div className={`${open === "p1" ? "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp active" : "icon-bx-wraper style-3 m-b30 box-hover wow fadeInUp"}`} onMouseOver={() => setOpen("p1")}>
 							<div className="icon-bx-sm radius bgl-primary"> 
@@ -32,6 +33,7 @@ function Service2({service2sData}) {
 							</div>
 						</div>
 					</div> 
+					</Link>
 					 )}  
 				
 					

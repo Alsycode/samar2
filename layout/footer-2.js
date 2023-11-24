@@ -1,6 +1,38 @@
 import Link from 'next/link';
+import { useState } from 'react';
+
 
 function Footer2() {
+	const [state, setState] = useState(0);
+	const [errorMsg, setErrorMsg] = useState("");
+	const subscribe = async (e) => {
+		e.preventDefault();
+	
+		setState(1);
+		setErrorMsg("");
+	
+		// Check if e.target exists and has elements
+		if (e.target && e.target.elements && e.target.elements[0]) {
+		  console.log(e.target.elements[0].value);
+		  try {
+			const res = await fetch("/api/newsletter", {
+			  method: "POST",
+			  body: e.target.elements[0].value,
+			});
+	
+			const data = await res.json();
+			if (data.error !== null) {
+			  throw data.error;
+			}
+			setState(2);
+		  } catch (error) {
+			setErrorMsg(error);
+			setState(3);
+		  }
+		} else {
+		  console.error('Unable to read value from the event target.');
+		}
+	  };
   return (
     <>
     {/* <!-- Footer --> */}
@@ -12,13 +44,13 @@ function Footer2() {
 						<h2 className="title">Subscribe To Our Newsletter For Latest Update</h2>
 					</div>
 					<div className="col-lg-5">
-						<form className="dzSubscribe" action="script/mailchamp.php" method="post">
+						<form className="dzSubscribe" onSubmit={subscribe} >
 							<div className="dzSubscribeMsg"></div>
 							<div className="form-group">
 								<div className="input-group">
 									<input name="dzEmail" required="required" type="email" className="form-control" placeholder="Your Email Address"/>
 									<div className="input-group-addon">
-										<button name="submit" value="Submit" type="submit" className="btn btn-primary gradient fa fa-paper-plane-o"></button>
+										<button name="submit" value="Submit" type="submit" className="btn btn-primary gradient fa fa-paper-plane-o" ></button>
 									</div>
 								</div>
 							</div>
@@ -34,7 +66,7 @@ function Footer2() {
                         <div className="widget widget_about">
 							<div className="footer-logo">
 								{/* <a href="/"><img src="images/logo-white.png" alt=""/></a>  */}
-								<h2 className='text-white'>BOOK-SEVA</h2>
+								<h2 className='text-white'>GoDigitalHub</h2>
 							</div>
 							<div className="widget widget_getintuch">
 								<ul>
